@@ -1,0 +1,6 @@
+de.qwikbyte.datacore
+de.qwikbyte.datacore.api
+de.qwikbyte.datacore.database
+de.qwikbyte.datacore.orm
+de.qwikbyte.datacore.orm.annotations
+de.qwikbyte.datacore.orm.utils
