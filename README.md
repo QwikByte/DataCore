@@ -1,6 +1,6 @@
 # 🧠 DataCore — Centralized ORM Framework for PaperMC
 
-[![Java](https://img.shields.io/badge/Java-21-orange?logo=openjdk)](https://adoptium.net)
+[![Java](https://img.shields.io/badge/Java-21-orange?logo=openjdk)](https://www.oracle.com/de/java/)
 [![PaperMC](https://img.shields.io/badge/API-Paper%201.21-blue?logo=minecraft)](https://papermc.io)
 [![Build](https://img.shields.io/badge/Build-Maven-green?logo=apachemaven)](https://maven.apache.org)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
