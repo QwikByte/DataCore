@@ -1,0 +1,5 @@
+database:
+  url: "jdbc:postgresql://localhost:5432/datacore"
+  user: "test_user"
+  password: "test1234"
+  pool-size: 10

@@ -1,0 +1,7 @@
+name: DataCore
+version: '1.0'
+main: de.qwikbyte.datacore.DataCorePlugin
+author: QwikByte
+database: true
+api-version: '1.21'
+description: Centralized SQL Framework for Paper Plugins (PostgreSQL-based)
