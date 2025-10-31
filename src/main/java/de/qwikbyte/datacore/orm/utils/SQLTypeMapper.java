@@ -31,7 +31,6 @@ import java.util.*;
  * JSON structures, collections, and maps. Automatically handles
  * PostgreSQL-specific types such as JSONB and BYTEA.</p>
  *
- * @author Daniel
  * @version 1.0
  * @since DataCore 1.0
  */
