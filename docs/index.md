@@ -5,6 +5,16 @@
 
 ---
 
+## 📖 Table of Contents
+- [🚀 Getting Started](getting-started.md)
+- [🧩 Annotations](annotations.md)
+- [🧠 Repositories](repositories.md)
+- [🧱 Type Mapping](typemapping.md)
+- [🔌 API Reference](api.md)
+- [🧾 Changelog](changelog.md)
+
+---
+
 ## ⚙️ What is DataCore?
 
 **DataCore** provides a lightweight, annotation-based ORM layer for [PaperMC](https://papermc.io) plugins.  
