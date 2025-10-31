@@ -3,7 +3,7 @@
 [![Java](https://img.shields.io/badge/Java-21-orange?logo=openjdk)](https://www.oracle.com/de/java/)
 [![PaperMC](https://img.shields.io/badge/API-Paper%201.21-blue?logo=minecraft)](https://papermc.io)
 [![Build](https://img.shields.io/badge/Build-Maven-green?logo=apachemaven)](https://maven.apache.org)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/QwikByte/DataCore?tab=MIT-1-ov-file)
 
 > A lightweight ORM and centralized SQL abstraction for Minecraft (PaperMC) plugins — Inspired by [Spring Data JPA](https://spring.io/projects/spring-data-jpa), built for performance and simplicity.
 
