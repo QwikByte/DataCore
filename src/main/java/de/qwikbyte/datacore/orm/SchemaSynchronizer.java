@@ -8,6 +8,25 @@ import java.lang.reflect.Field;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * The SchemaSynchronizer class is responsible for ensuring that the database schema
+ * is synchronized with the structure of annotated Java entity classes. It provides
+ * functionality for creating tables and adding columns to match the fields in the entity classes.
+ *
+ * This class works with entity classes annotated with {@code @Entity}, and their fields must
+ * be annotated with {@code @Column}. It uses database metadata to check existing table and column
+ * definitions, and it creates or updates database schemas as necessary.
+ *
+ * The synchronization process includes:
+ * - Checking the presence of an {@code @Entity} annotation to identify the corresponding database table.
+ * - Gathering fields annotated with {@code @Column}, determining their properties, and mapping them to SQL types.
+ * - Creating new tables if they do not exist.
+ * - Adding missing columns to an existing table.
+ *
+ * Dependencies:
+ * - DatabaseManager: A helper class responsible for managing database connections.
+ * - Annotations: {@code @Entity}, {@code @Column}, {@code @GeneratedValue}.
+ */
 public class SchemaSynchronizer {
 
     private final DatabaseManager db;
@@ -16,6 +35,32 @@ public class SchemaSynchronizer {
         this.db = db;
     }
 
+    /**
+     * Synchronizes the database schema for a given entity class by ensuring that its corresponding
+     * database table and columns are properly created or updated according to the annotations
+     * defined in the class.
+     *
+     * If the specified entity class is annotated with {@code @Entity}, the method performs the
+     * following actions:
+     * - Retrieves the table name specified in the {@code @Entity} annotation.
+     * - Checks existing columns in the table based on metadata from the database.
+     * - Compares the annotated fields in the class with the existing columns.
+     * - Creates the table if it does not exist.
+     * - Adds missing columns to the table.
+     *
+     * If the entity class is not annotated with {@code @Entity}, the method exits without performing any actions.
+     *
+     * The method uses field-level annotations like {@code @Column} to determine the column
+     * properties (e.g., name, nullable, primary key). Additionally, it uses {@code @GeneratedValue}
+     * to identify fields with generated values and their corresponding generation strategies.
+     *
+     * Throws {@code SQLException} if any database error occurs during schema synchronization.
+     *
+     * @param entityClass the class representing the entity for which the database schema
+     *                    needs to be synchronized. This class must be annotated with {@code @Entity}.
+     *                    Fields annotated with {@code @Column} are treated as database columns.
+     * @throws SQLException if there is an error while creating or altering the database schema.
+     */
     public void syncEntity(Class<?> entityClass) throws SQLException {
         if (!entityClass.isAnnotationPresent(Entity.class)) return;
 
@@ -60,6 +105,13 @@ public class SchemaSynchronizer {
         }
     }
 
+    /**
+     * Retrieves a map of existing columns for a specified table in the database.
+     * The map contains the column names as keys and their corresponding data types as values.
+     *
+     * @param tableName the name of the database table whose columns are to be retrieved
+     * @return a map where the keys are column names and the values are column data types
+     */
     private Map<String, String> getExistingColumns(String tableName) {
         Map<String, String> map = new HashMap<>();
         try (Connection conn = db.getConnection();

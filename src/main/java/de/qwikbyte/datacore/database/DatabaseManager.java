@@ -7,6 +7,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+/**
+ * Manages the database connection pool and provides utility methods for acquiring and closing database connections.
+ * Utilizes a HikariCP connection pool for efficient database connectivity management.
+ * Typical use cases include providing connections for executing SQL queries and managing resource cleanup.
+ */
 public class DatabaseManager {
 
     private final HikariDataSource dataSource;
