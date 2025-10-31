@@ -111,7 +111,7 @@ repo.insert("QwikByte", 100);
 ## 🧠 Supported Types
 
 DataCore automatically maps Java types to PostgreSQL column types.
-For the full list, see [TypeMapping](https://qwikbyte.github.io/DataCore/typemapping.md).
+For the full list, see [TypeMapping](typemapping.md).
 
 | Java Type     | PostgreSQL Type | Example            |
 | ------------- | --------------- | ------------------ |
@@ -126,7 +126,7 @@ For the full list, see [TypeMapping](https://qwikbyte.github.io/DataCore/typemap
 
 ## 🔌 API Reference
 
-For API details, visit the [JavaDoc Reference](https://qwikbyte.github.io/DataCore/javadocs).
+For API details, visit the [API Reference](api).
 
 | Method                        | Description                              |
 | ----------------------------- | ---------------------------------------- |
