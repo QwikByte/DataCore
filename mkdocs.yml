@@ -1,0 +1,17 @@
+site_name: DataCore Documentation
+site_url: https://qwikbyte.github.io/DataCore/
+repo_url: https://github.com/QwikByte/DataCore
+theme:
+  name: material
+  logo: assets/icon.png
+  palette:
+    primary: indigo
+    accent: deep purple
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Annotations: annotations.md
+  - Repositories: repositories.md
+  - Type Mapping: typemapping.md
+  - API:
+      - JavaDoc: apidocs/index.html
