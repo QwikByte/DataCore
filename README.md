@@ -5,7 +5,7 @@
 [![Build](https://img.shields.io/badge/Build-Maven-green?logo=apachemaven)](https://maven.apache.org)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
 
-> A lightweight ORM and centralized SQL abstraction for Minecraft (PaperMC) plugins — inspired by Spring Data JPA, built for performance and simplicity.
+> A lightweight ORM and centralized SQL abstraction for Minecraft (PaperMC) plugins — Inspired by [Spring Data JPA](https://spring.io/projects/spring-data-jpa), built for performance and simplicity.
 
 ---
 
