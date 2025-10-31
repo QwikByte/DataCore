@@ -88,33 +88,34 @@ repo.insert("QwikByte", 100);
 
 ## 🧠 Supported Java Types
 
-| Java Type                       | PostgreSQL Type                  | Beschreibung                                           |
-| ------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| `byte`, `Byte`                  | `SMALLINT`                       | 8-Bit Ganzzahl                                         |
-| `short`, `Short`                | `SMALLINT`                       | 16-Bit Ganzzahl                                        |
-| `int`, `Integer`                | `INT` / `SERIAL`                 | 32-Bit Ganzzahl (Auto-Increment bei `@GeneratedValue`) |
-| `long`, `Long`                  | `BIGINT` / `BIGSERIAL`           | 64-Bit Ganzzahl (Auto-Increment bei `@GeneratedValue`) |
-| `float`, `Float`                | `REAL`                           | Einfach-präzise Fließkommazahl                         |
-| `double`, `Double`              | `DOUBLE PRECISION`               | Doppel-präzise Fließkommazahl                          |
-| `BigDecimal`                    | `NUMERIC(18,4)`                  | Feste Präzision, ideal für Geld-/Werte                 |
-| `boolean`, `Boolean`            | `BOOLEAN`                        | Wahr / Falsch                                          |
-| `char`, `Character`             | `CHAR(1)`                        | Einzelnes Zeichen                                      |
-| `String`                        | `TEXT`                           | UTF-8 String beliebiger Länge                          |
-| `UUID`                          | `UUID`                           | Universell eindeutige ID                               |
-| `LocalDate`                     | `DATE`                           | Datum (yyyy-MM-dd)                                     |
-| `LocalTime`                     | `TIME`                           | Uhrzeit (HH:mm:ss)                                     |
-| `LocalDateTime`                 | `TIMESTAMP`                      | Datum + Zeit                                           |
-| `Instant`                       | `TIMESTAMP`                      | UTC-Zeitpunkt                                          |
-| `Date (java.util)`              | `TIMESTAMP`                      | Java-Legacy-Datum                                      |
-| `byte[]`                        | `BYTEA`                          | Binärdaten (z. B. Bilder, Dateien)                     |
-| `Enum`                          | `TEXT`                           | Enum-Name als String gespeichert                       |
-| `Collection<?>` (`List`, `Set`) | `JSONB`                          | Automatisch zu JSON serialisiert                       |
-| `Map<?, ?>`                     | `JSONB`                          | Key-Value-JSON Mapping                                 |
-| `JsonNode` (Jackson)            | `JSONB`                          | Native JSON Objekte                                    |
-| `JSONObject` (org.json)         | `JSONB`                          | Alternative JSON-Implementierung                       |
-| `Optional<T>`                   | Entpackt T                       | Automatische Typweitergabe                             |
-| `Object` (sonstiges)            | `TEXT`                           | Fallback (`toString()`)                                |
-| `@GeneratedValue(UUID)`         | `UUID DEFAULT gen_random_uuid()` | Automatisch generierte UUID                            |
+| Java Type                       | PostgreSQL Type                  | Description                                                  |
+| ------------------------------- | -------------------------------- | ------------------------------------------------------------ |
+| `byte`, `Byte`                  | `SMALLINT`                       | 8-bit integer                                                |
+| `short`, `Short`                | `SMALLINT`                       | 16-bit integer                                               |
+| `int`, `Integer`                | `INT` / `SERIAL`                 | 32-bit integer (auto-increment when using `@GeneratedValue`) |
+| `long`, `Long`                  | `BIGINT` / `BIGSERIAL`           | 64-bit integer (auto-increment when using `@GeneratedValue`) |
+| `float`, `Float`                | `REAL`                           | Single-precision floating-point number                       |
+| `double`, `Double`              | `DOUBLE PRECISION`               | Double-precision floating-point number                       |
+| `BigDecimal`                    | `NUMERIC(18,4)`                  | Fixed precision, ideal for monetary or precise values        |
+| `boolean`, `Boolean`            | `BOOLEAN`                        | True / False                                                 |
+| `char`, `Character`             | `CHAR(1)`                        | Single character                                             |
+| `String`                        | `TEXT`                           | UTF-8 string of variable length                              |
+| `UUID`                          | `UUID`                           | Universally unique identifier                                |
+| `LocalDate`                     | `DATE`                           | Calendar date (yyyy-MM-dd)                                   |
+| `LocalTime`                     | `TIME`                           | Time of day (HH:mm:ss)                                       |
+| `LocalDateTime`                 | `TIMESTAMP`                      | Date and time                                                |
+| `Instant`                       | `TIMESTAMP`                      | UTC timestamp                                                |
+| `Date (java.util)`              | `TIMESTAMP`                      | Legacy Java date                                             |
+| `byte[]`                        | `BYTEA`                          | Binary data (e.g., files, images)                            |
+| `Enum`                          | `TEXT`                           | Enum constant name stored as string                          |
+| `Collection<?>` (`List`, `Set`) | `JSONB`                          | Automatically serialized to JSON                             |
+| `Map<?, ?>`                     | `JSONB`                          | Key-value JSON mapping                                       |
+| `JsonNode` (Jackson)            | `JSONB`                          | Native JSON object support                                   |
+| `JSONObject` (org.json)         | `JSONB`                          | Alternative JSON implementation                              |
+| `Optional<T>`                   | Unwrapped `T`                    | Automatically resolves underlying type                       |
+| `Object` (any other type)       | `TEXT`                           | Fallback (uses `toString()`)                                 |
+| `@GeneratedValue(UUID)`         | `UUID DEFAULT gen_random_uuid()` | Automatically generated UUID value                           |
+
 ---
 ## 🔌 API Access
 
