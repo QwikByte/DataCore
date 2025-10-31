@@ -1,3 +1,13 @@
+## 📖 Table of Contents
+- [🚀 Getting Started](getting-started.md)
+- [🧩 Annotations](annotations.md)
+- [🧠 Repositories](repositories.md)
+- [🧱 Type Mapping](typemapping.md)
+- [🔌 API Reference](api.md)
+- [🧾 Changelog](changelog.md)
+
+---
+
 # 🧱 Java ↔ PostgreSQL Type Mapping
 
 DataCore automatically converts between **Java types** and **PostgreSQL column types**  
