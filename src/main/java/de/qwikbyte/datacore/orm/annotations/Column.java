@@ -28,4 +28,5 @@ public @interface Column {
     String name();
     boolean id() default false;
     boolean nullable() default true;
+    boolean unique() default false;
 }

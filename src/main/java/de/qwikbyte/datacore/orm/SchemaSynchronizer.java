@@ -86,6 +86,7 @@ public class SchemaSynchronizer {
             if (!columnsInDb.containsKey(columnName)) {
                 String def = columnName + " " + sqlType
                         + (c.id() ? " PRIMARY KEY" : "")
+                        + (c.unique() ? " UNIQUE" : "")
                         + (c.nullable() ? "" : " NOT NULL");
                 newColumns.add(def);
             }

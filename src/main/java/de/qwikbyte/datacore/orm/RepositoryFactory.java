@@ -146,9 +146,9 @@ public class RepositoryFactory {
         private Object mapResultSet(ResultSet rs, Class<?> returnType, Class<?> entityClass) throws Exception {
             List<Object> results = new ArrayList<>();
 
-            String table = entityClass.isAnnotationPresent(Entity.class)
+            /*String table = entityClass.isAnnotationPresent(Entity.class)
                     ? entityClass.getAnnotation(Entity.class).table()
-                    : entityClass.getSimpleName();
+                    : entityClass.getSimpleName();*/
 
             while (rs.next()) {
                 Object entity = entityClass.getDeclaredConstructor().newInstance();
@@ -177,9 +177,9 @@ public class RepositoryFactory {
             // Rückgabe je nach Typ
             if (returnType.equals(List.class)) return results;
             if (returnType.equals(Optional.class))
-                return results.isEmpty() ? Optional.empty() : Optional.of(results.get(0));
+                return results.isEmpty() ? Optional.empty() : Optional.of(results.getFirst());
             if (results.isEmpty()) return null;
-            return results.get(0);
+            return results.getFirst();
         }
     }
 }
