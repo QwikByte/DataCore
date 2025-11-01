@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"de.qwikbyte.datacore"},{"l":"de.qwikbyte.datacore.api"},{"l":"de.qwikbyte.datacore.database"},{"l":"de.qwikbyte.datacore.orm"},{"l":"de.qwikbyte.datacore.orm.annotations"},{"l":"de.qwikbyte.datacore.orm.utils"}];updateSearchResults();
